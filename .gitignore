@@ -5,8 +5,6 @@ backups
 elpa
 ido.last
 recentf
-*-local.el
-*-local
 project-persist
 .cask
 tramp
