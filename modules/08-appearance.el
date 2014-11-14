@@ -1,7 +1,7 @@
 ;; -*- emacs-lisp -*-
 
 ;; enable sRGB colors in the Cocoa version of em
-(setq ns-use-srgb-colorspace t)
+;;(setq ns-use-srgb-colorspace t)
 
 (setq
  ;; display line & column numbers in mode-line
@@ -55,8 +55,13 @@
 (require 'parenface-plus)
 (set-face-foreground 'paren-face "#666")
 
-;; TODO customize ac-complete for color theme
-;(set-face-background 'ac-candidate-face "#366060")
-;(set-face-foreground 'ac-selection-face "#1f1f1f")
-;(set-face-background 'ac-selection-face "#8cd0d3")
-;(set-face-foreground 'ac-selection-face "#1f1f1f")
+;; customize company-mode's popup
+(let ((bg (face-attribute 'default :background)))
+    (custom-set-faces
+     `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+     `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+     `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+     `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+     `(company-tooltip-common-selection ((t (:inherit font-lock-keyword-face))))
+     `(company-tooltip-selection ((t (:inherit font-lock-keyword-face))))))
+
