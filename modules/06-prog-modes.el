@@ -66,11 +66,19 @@ Including indent-buffer, which should not be called automatically on save."
             (font-lock-add-keywords
              nil '(("\\<\\(XXX\\|BUG\\|TODO\\)" 1 font-lock-warning-face prepend)))))
 
-;; reindent-then-newline-and-indent is bad news for python's
-;; syntactically important whitespace
+;; reindent-then-newline-and-indent is bad news for languages
+;; with syntactically important whitespace
 (add-hook 'python-mode-hook
           (lambda ()
             (define-key python-mode-map [remap newline] 'newline-and-indent)))
+
+(add-hook 'slim-mode-hook
+          (lambda ()
+            (define-key slim-mode-map [remap newline] 'newline-and-indent)))
+
+(add-hook 'haml-mode-hook
+          (lambda ()
+            (define-key haml-mode-map [remap newline] 'newline-and-indent)))
 
 ;;;;;; LISPS
 
