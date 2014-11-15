@@ -35,9 +35,9 @@
 (setq default-cursor-type 'bar)
 
 ;; fancy lambda, &c
-(global-prettify-symbols-mode 1)
-(mapc (lambda (m) (add-hook m (lambda () (push '("fn" . ?ƒ) prettify-symbols-alist))))
-      '(clojure-mode-hook clojurescript-mode-hook))
+;;(global-prettify-symbols-mode 1)
+;;(mapc (lambda (m) (add-hook m (lambda () (push '("fn" . ?ƒ) prettify-symbols-alist))))
+;;      '(clojure-mode-hook clojurescript-mode-hook))
 
 ;; diminish global minor modes
 (eval-after-load 'undo-tree

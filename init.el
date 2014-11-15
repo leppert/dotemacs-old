@@ -6,8 +6,13 @@
 
 ;; no window chrome!
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(menu-bar-mode nil)
+ '(safe-local-variable-values (quote ((slim-indent-offset . 4))))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 
@@ -56,3 +61,14 @@
 ;;(define-key global-map "<s-E>" 'org-capture)
 
 ;; TODO bring in more web development stuff
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-scrollbar-bg ((t (:background "#2f2f2f"))))
+ '(company-scrollbar-fg ((t (:background "#222222"))))
+ '(company-tooltip ((t (:inherit default :background "#1b1b1b"))))
+ '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+ '(company-tooltip-common-selection ((t (:inherit font-lock-keyword-face))))
+ '(company-tooltip-selection ((t (:inherit font-lock-keyword-face)))))
