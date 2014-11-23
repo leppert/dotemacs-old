@@ -23,6 +23,7 @@
 (depends-on "diminish")
 (depends-on "elisp-slime-nav")
 (depends-on "epl")
+(depends-on "ethan-wspace")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")
 (depends-on "f")
