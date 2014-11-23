@@ -64,6 +64,23 @@
 (setq-default uniquify-buffer-name-style 'forward)
 
 (require 'graphene)
+(global-set-key (kbd "C-=") 'increase-window-width)
+(global-set-key (kbd "C-+") 'decrease-window-width)
 
 ;; for the silver surfer highlighting
 (setq ag-highlight-search t)
+
+;; vim style kill line
+;; via: http://stackoverflow.com/a/2173393/313561
+(defun kill-current-line (&optional n)
+  (interactive "p")
+  (save-excursion
+    (beginning-of-line)
+    (let ((kill-whole-line t))
+      (kill-line n))))
+
+;; Multiple Cursors
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
