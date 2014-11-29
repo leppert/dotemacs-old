@@ -1,5 +1,9 @@
 ;; -*- emacs-lisp -*-
 
+;;; Code:
+
+(load "~/.emacs.d/leppert-local/private.el")
+
 ;; Use two spaces for tabs in JS
 (setq-default js2-basic-offset 2)
 
@@ -64,8 +68,6 @@
 (setq-default uniquify-buffer-name-style 'forward)
 
 (require 'graphene)
-(global-set-key (kbd "C-=") 'increase-window-width)
-(global-set-key (kbd "C-+") 'decrease-window-width)
 
 ;; for the silver surfer highlighting
 (setq ag-highlight-search t)
@@ -84,3 +86,6 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+(provide 'leppert-local)
+;;; leppert-local.el ends here
