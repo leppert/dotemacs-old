@@ -1,10 +1,17 @@
 ;;; skewer-coffee.el --- skewer support for live-interactive Coffeescript
 
+(defun skewer-coffee-inject-parser ()
+  "Injects the coffeescript parser script into the browser"
+  (interactive)
+  (skewer-eval "if(!window.CoffeeScript){var head=document.getElementsByTagName('head')[0],script=document.createElement('script');script.src='http://coffeescript.org/extras/coffee-script.js';head.appendChild(script);}"))
+
 (defun skewer-coffee-eval (coffee-code)
   "Requests the browser to evaluate a coffeescipt string."
   ;; XXX should escape double quote characters
   (skewer-eval (concat "CoffeeScript.eval(\""
-                       (s-replace "\n" "\\n" (s-trim coffee-code))
+                       (s-replace "\"" "\\\""
+                                  (s-replace "\n" "\\n"
+                                             (s-replace "\\" "\\\\" (s-trim coffee-code))))
                        "\");")
                #'skewer-post-minibuffer))
 
