@@ -11,5 +11,15 @@ tramp
 .graphene-geometry
 url/cookies
 .mc-lists.el
+
+# Private env vars (API keys, etc)
 leppert-local/private.el
+
+# Compiled elisp files
 *.elc
+
+# M-x command history
+smex-items
+
+# Stackoverflow package cache
+.sx
