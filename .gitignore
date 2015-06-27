@@ -12,3 +12,4 @@ tramp
 url/cookies
 .mc-lists.el
 leppert-local/private.el
+*.elc
