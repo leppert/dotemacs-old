@@ -12,6 +12,11 @@
 (setq abbrev-file-name
       "~/.emacs.d/leppert-local/abbrev_defs")
 
+;; Enable pallet-mode so that newly installed
+;; packages are written to the Cask file
+(require 'pallet)
+(pallet-mode)
+
 ;; web-mode
 (defun web-mode-customizations ()
   (setq web-mode-markup-indent-offset 2)
