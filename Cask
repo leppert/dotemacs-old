@@ -64,6 +64,7 @@
 (depends-on "know-your-http-well")
 (depends-on "less-css-mode")
 (depends-on "let-alist")
+(depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "motion-mode")
 (depends-on "multiple-cursors")

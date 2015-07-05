@@ -137,10 +137,5 @@
 (eval-after-load 'tramp
   '(vagrant-tramp-enable))
 
-;; In order to use the faster Magit "next" branch
-;; TODO remove once Magit "next" is released
-(add-to-list 'load-path "~/.emacs.d/leppert-local/magit/")
-(require 'magit)
-
 (provide 'leppert-local)
 ;;; leppert-local.el ends here
