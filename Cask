@@ -113,6 +113,7 @@
 (depends-on "tern")
 (depends-on "tern-auto-complete")
 (depends-on "textmate")
+(depends-on "tidy")
 (depends-on "tuareg")
 (depends-on "undo-tree")
 (depends-on "vagrant-tramp")
