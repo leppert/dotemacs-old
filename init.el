@@ -12,7 +12,12 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(menu-bar-mode nil)
- '(safe-local-variable-values (quote ((slim-indent-offset . 4))))
+ '(paradox-automatically-star nil)
+ '(safe-local-variable-values
+   (quote
+    ((pony-settings
+      (make-pony-project :python "/Users/leppert/.virtualenvs/perma/bin/python"))
+     (slim-indent-offset . 4))))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 
