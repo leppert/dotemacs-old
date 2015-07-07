@@ -17,6 +17,10 @@
 (require 'pallet)
 (pallet-mode)
 
+;; font for all unicode characters
+;; via: http://stackoverflow.com/a/22656515/313561
+(set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
+
 ;; web-mode
 (defun web-mode-customizations ()
   (setq web-mode-markup-indent-offset 2)
