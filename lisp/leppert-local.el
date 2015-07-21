@@ -17,6 +17,10 @@
 (require 'pallet)
 (pallet-mode)
 
+;; Enable recursive editing in the minibuffer
+;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Recursive-Edit.html
+(setq enable-recursive-minibuffers t)
+
 ;; font for all unicode characters
 ;; via: http://stackoverflow.com/a/22656515/313561
 (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
