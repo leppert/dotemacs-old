@@ -25,6 +25,9 @@
 ;; via: http://stackoverflow.com/a/22656515/313561
 (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
 
+;; magit
+(setq magit-push-always-verify nil)
+
 ;; web-mode
 (defun web-mode-customizations ()
   (setq web-mode-markup-indent-offset 2)
@@ -136,6 +139,10 @@
 
 (require 'rspec-mode)
 (define-key rspec-mode-map (kbd "C-c C-c") 'rspec-verify-single)
+
+(require 'minitest)
+(setq minitest-use-spring t)
+(define-key minitest-mode-map (kbd "C-c C-c") 'minitest-verify-single)
 
 ;; PHP
 (require 'php-mode)
