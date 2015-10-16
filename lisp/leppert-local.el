@@ -148,9 +148,5 @@
 (require 'php-mode)
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 
-;; Vagrant TRAMP
-(eval-after-load 'tramp
-  '(vagrant-tramp-enable))
-
 (provide 'leppert-local)
 ;;; leppert-local.el ends here
