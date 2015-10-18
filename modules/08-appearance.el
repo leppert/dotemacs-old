@@ -27,12 +27,12 @@
                  "%b"))))
 
 ;; font and spacing
-(set-default-font "Menlo-13")
+(set-frame-font "Menlo-13")
 (setq-default line-spacing 3)
 
 ;; unblinking bar-style cursor
 (blink-cursor-mode 0)
-(setq default-cursor-type 'bar)
+(setq cursor-type 'bar)
 
 ;; fancy lambda, &c
 (global-prettify-symbols-mode 1)
