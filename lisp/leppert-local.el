@@ -148,5 +148,12 @@
 (require 'php-mode)
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 
+;; org-mode
+(require 'org-download)
+;; http://lists.gnu.org/archive/html/emacs-orgmode/2012-08/msg01388.html
+(setq org-image-actual-width '(300))
+(setq-default org-download-image-dir "./media/images")
+(setq-default org-download-heading-lvl nil)
+
 (provide 'leppert-local)
 ;;; leppert-local.el ends here

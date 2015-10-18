@@ -79,6 +79,7 @@
 (depends-on "multiple-cursors")
 (depends-on "mustache-mode")
 (depends-on "names")
+(depends-on "org-download")
 (depends-on "package-build")
 (depends-on "pallet")
 (depends-on "paradox")
